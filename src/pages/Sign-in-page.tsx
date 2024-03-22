@@ -5,7 +5,7 @@ import { FormInput } from '../components/FormInput';
 import { FormFieldsData } from '../data/form-fields-data';
 import { FormWrapper } from '../components/FormWrapper';
 import { AppFields } from '../models/common';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../utils/firebaseModule';
 import React, { useState } from 'react';
 import { RouterPage } from '../router';
@@ -68,6 +68,14 @@ export function SignInPage() {
       >
         {credentialErrorVisible ? translate.invalidEmailOrPassword : 'error'}
       </p>
+      <div className="flex justify-around border p-1">
+        <Link
+          to={RouterPage.SIGN_UP}
+          className="hover:brightness-125 hover:scale-[1.02] transition-all duration-200 ease-in-out"
+        >
+          {translate.signUp}
+        </Link>
+      </div>
     </FormWrapper>
   );
 }

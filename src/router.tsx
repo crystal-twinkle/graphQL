@@ -10,12 +10,14 @@ import { PrivateOnlyPageWrapper } from './components/PrivateOnlyPageWrapper';
 import { AnonymousOnlyPageWrapper } from './components/AnonymousOnlyPageWrapper';
 import { ErrorBoundary } from 'react-error-boundary';
 import ErrorComponent from './components/ErrorComponent';
+import { AboutPage } from './pages/About-page';
 
 export enum RouterPage {
   WELCOME = '/',
   GQL = '/gql',
   SIGN_IN = '/sign-in',
   SIGN_UP = '/sign-up',
+  About = '/about',
 }
 const ErrorBoundaryLayout = () => (
   <ErrorBoundary FallbackComponent={ErrorComponent}>
@@ -55,6 +57,10 @@ export const routes: RouteObject[] = [
             <SignUpPage />
           </AnonymousOnlyPageWrapper>
         ),
+      },
+      {
+        path: RouterPage.About,
+        element: <AboutPage />,
       },
       {
         path: '*',

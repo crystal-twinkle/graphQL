@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { validationSchema } from '../utils/validation.util';
@@ -100,6 +100,14 @@ export function SignUpPage() {
       >
         {somethingWentWrongVisible ? translate.somethingWentWrong : 'error'}
       </p>
+      <div className="flex justify-around border p-1">
+        <Link
+          to={RouterPage.SIGN_IN}
+          className="hover:brightness-125 hover:scale-[1.02] transition-all duration-200 ease-in-out"
+        >
+          {translate.signIn}
+        </Link>
+      </div>
     </FormWrapper>
   );
 }
