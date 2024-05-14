@@ -66,8 +66,10 @@ export function WelcomePage() {
           <pre className="text-xl whitespace-pre-wrap">
             <code className="text-gray-300">
               {`
+for endpoint:              
+https://swapi-graphql.netlify.app/.netlify/functions/index
+              
 for Editor:
-
 query GetPlanet($ID: ID!) {
   planet(id: $ID) {
     diameter
@@ -77,7 +79,6 @@ query GetPlanet($ID: ID!) {
 
 
 for Variables:
-
 {
   "ID":"cGxhbmV0czox"
 }
