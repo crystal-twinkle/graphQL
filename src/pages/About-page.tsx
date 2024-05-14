@@ -1,4 +1,3 @@
-import QueryEditor from '../components/QueryEditor/QueryEditor';
 import DeveloperCard from '../components/DeveloperCard/DeveloperCard';
 import avatar1 from '../assets/images/Avatar_1.jpg';
 import avatar2 from '../assets/images/Avatar_2.jpg';

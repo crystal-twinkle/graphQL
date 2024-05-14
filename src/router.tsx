@@ -6,7 +6,6 @@ import { SignInPage } from './pages/Sign-in-page';
 import { NotFoundPage } from './pages/Not-found-page';
 import { SignUpPage } from './pages/Sign-up-page';
 import { Layout } from './components/Layout';
-import { PrivateOnlyPageWrapper } from './components/PrivateOnlyPageWrapper';
 import { AnonymousOnlyPageWrapper } from './components/AnonymousOnlyPageWrapper';
 import { ErrorBoundary } from 'react-error-boundary';
 import ErrorComponent from './components/ErrorComponent';
@@ -36,11 +35,7 @@ export const routes: RouteObject[] = [
       },
       {
         path: RouterPage.GQL,
-        element: (
-          <PrivateOnlyPageWrapper>
-            <GqlPage />
-          </PrivateOnlyPageWrapper>
-        ),
+        element: <GqlPage />,
       },
       {
         path: RouterPage.SIGN_IN,
